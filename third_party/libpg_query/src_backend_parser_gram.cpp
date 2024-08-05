@@ -1195,7 +1195,7 @@ namespace duckdb_libpgquery {
  */
 #define YYMALLOC palloc
 #define YYFREE   pfree
-#define YYINITDEPTH 10000
+#define YYINITDEPTH 1000
 
 /* A type that is properly aligned for any stack member.  */
 union yyalloc
@@ -19687,7 +19687,7 @@ int yydebug;
 
 /* YYINITDEPTH -- initial size of the parser's stacks.  */
 #ifndef	YYINITDEPTH
-# define YYINITDEPTH 10000
+# define YYINITDEPTH 200
 #endif
 
 /* YYMAXDEPTH -- maximum size the stacks can grow to (effective only
@@ -32077,11 +32077,6 @@ void
 parser_init(base_yy_extra_type *yyext)
 {
 	yyext->parsetree = NIL;		/* in case grammar forgets to set it */
-}
-
-
-void print_settings() {
-	printf("YYINITDEPTH=%s",YYINITDEPTH);
 }
 
 #undef yyparse
