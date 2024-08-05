@@ -1195,7 +1195,7 @@ namespace duckdb_libpgquery {
  */
 #define YYMALLOC palloc
 #define YYFREE   pfree
-#define YYINITDEPTH 1000
+#define YYINITDEPTH 10000
 
 /* A type that is properly aligned for any stack member.  */
 union yyalloc
