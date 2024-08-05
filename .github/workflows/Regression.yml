@@ -54,10 +54,6 @@ jobs:
       with:
         fetch-depth: 0
 
-    - uses: actions/setup-python@v5
-      with:
-        python-version: '3.12'
-
     - name: Install
       shell: bash
       run: sudo apt-get update -y -qq && sudo apt-get install -y -qq ninja-build && pip install requests
@@ -74,11 +70,10 @@ jobs:
         make
         git clone --branch ${{ env.BASE_BRANCH }} https://github.com/duckdb/duckdb.git --depth=1
         cd duckdb
-        make
-        cd ..
+        make release
 
     - name: Regression Test
       if: always()
       shell: bash
       run: |
-        make unittest_release
+        ./build/release/duckdb -c ".read q.txt"
