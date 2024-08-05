@@ -338,7 +338,7 @@ unittest: debug
 	build/debug/tools/sqlite3_api_wrapper/test_sqlite3_api_wrapper
 
 unittest_release: release
-	build/release/test/unittest
+	build/release/test/unittest "test/sql/parser/*"
 	build/release/tools/sqlite3_api_wrapper/test_sqlite3_api_wrapper
 
 unittestci:
