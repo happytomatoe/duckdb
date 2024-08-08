@@ -1,0 +1,22 @@
+.cd data
+CREATE TEMP TABLE aka_name AS SELECT * FROM 'job_aka_name.parquet';
+CREATE TEMP TABLE aka_title AS SELECT * FROM 'job_aka_title.parquet';
+CREATE TEMP TABLE cast_info AS SELECT * FROM 'job_cast_info.parquet';
+CREATE TEMP TABLE char_name AS SELECT * FROM 'job_char_name.parquet';
+CREATE TEMP TABLE comp_cast_type AS SELECT * FROM 'job_comp_cast_type.parquet';
+CREATE TEMP TABLE company_name AS SELECT * FROM 'job_company_name.parquet';
+CREATE TEMP TABLE company_type AS SELECT * FROM 'job_company_type.parquet';
+CREATE TEMP TABLE complete_cast AS SELECT * FROM 'job_complete_cast.parquet';
+CREATE TEMP TABLE info_type AS SELECT * FROM 'job_info_type.parquet';
+CREATE TEMP TABLE keyword AS SELECT * FROM 'job_keyword.parquet';
+CREATE TEMP TABLE kind_type AS SELECT * FROM 'job_kind_type.parquet';
+CREATE TEMP TABLE link_type AS SELECT * FROM 'job_link_type.parquet';
+CREATE TEMP TABLE movie_companies AS SELECT * FROM 'job_movie_companies.parquet';
+CREATE TEMP TABLE movie_info AS SELECT * FROM 'job_movie_info.parquet';
+CREATE TEMP TABLE movie_info_idx AS SELECT * FROM 'job_movie_info_idx.parquet';
+CREATE TEMP TABLE movie_keyword AS SELECT * FROM 'job_movie_keyword.parquet';
+CREATE TEMP TABLE movie_link AS SELECT * FROM 'job_movie_link.parquet';
+CREATE TEMP TABLE name AS SELECT * FROM 'job_name.parquet';
+CREATE TEMP TABLE person_info AS SELECT * FROM 'job_person_info.parquet';
+CREATE TEMP TABLE role_type AS SELECT * FROM 'job_role_type.parquet';
+CREATE TEMP TABLE title AS SELECT * FROM 'job_title.parquet';
